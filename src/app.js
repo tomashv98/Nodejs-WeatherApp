@@ -81,6 +81,9 @@ app.get("/*", (req, res) => {
 });
 
 
-app.listen(8080, () => {
-    console.log("Server started")
+const port = process.env.PORT || 8080;
+const ip = process.env.IP || "localhost";
+
+app.listen(port, function () {
+    console.log("Server has started");
 });
